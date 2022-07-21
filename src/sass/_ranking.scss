@@ -1,0 +1,104 @@
+.ranking {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: antiquewhite;
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 100%;
+
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 0.9rem;
+        font-family: $roboto;
+      }
+
+      &__options {
+        background-color: antiquewhite;
+        border-top: none ;
+        border-right: none;
+        border-left: none ;
+        border-bottom: 1px solid black;
+      }
+    }
+
+    div:nth-child(2) {
+      background-color: black;
+      color: antiquewhite;
+      font-size: 2rem;
+      height: 80px;
+    }
+
+    div:nth-child(3) {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: antiquewhite;
+      font-size: 1.6rem;
+      height: 75px;
+    }
+
+    div:nth-child(4) {
+      background-color: rgba(0, 0, 0, 0.65);
+      color: antiquewhite;
+      font-size: 1.2rem;
+      height: 71px;
+    }
+
+    h1 {
+      font-family: $fredoka;
+      background-color: antiquewhite;
+      width: 40%;
+      padding: 2vh 0;
+    }
+
+    &__player {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid black;
+      width: 100%;
+      padding: 3px 0;
+
+      &__image {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+
+        img {
+          position: absolute;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          border-radius: 25px;
+          padding-left: 10px;
+        }
+      }
+
+      &__title {
+        font-family: $roboto;
+        padding: 0 2vw;
+        width: 50%;
+      }
+
+      &__points {
+        font-family: $roboto;
+        padding: 0 2vw;
+      }
+    }
+  }
+}

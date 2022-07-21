@@ -2,15 +2,13 @@ import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter } from 'react-router-dom';
 
 import App from './App';
-import { CurrentUserContextProvider } from './contexts/CurrentUser';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <CurrentUserContextProvider>
-      <App />
-    </CurrentUserContextProvider>
-  </React.StrictMode>,
+  <HashRouter>
+    <App />
+  </HashRouter>,
   document.getElementById('root'),
 );
