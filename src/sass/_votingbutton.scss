@@ -1,0 +1,16 @@
+.button {
+    &__include{
+    width: 150px;
+    height: 30px;
+    border-radius: 25px;    
+    -webkit-box-shadow: 5px 6px 0px 0px #000000;
+    box-shadow: 5px 6px 0px 0px #000000;
+    cursor: pointer;
+
+    &:hover{
+    -webkit-box-shadow: 2px 3px 0px 0px #000000;
+    box-shadow: 2px 3px 0px 0px #000000;
+    transform: translate3d(2px, 3px, 0);
+    }
+    }
+}

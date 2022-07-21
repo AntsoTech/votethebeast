@@ -1,0 +1,53 @@
+.nav {
+    display: flex;
+    position: fixed relative;
+    width: 100vw;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(28, 28, 28);
+
+    li {
+        list-style: none;
+    }
+
+    h2 {
+        color: white;
+        font-size: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &__ball {
+        position: absolute;
+    }
+
+    &__logo {
+        width: 50vw;
+        padding-left: 60px;
+        text-align: left;
+        text-decoration: none;
+
+        &__title {
+            font-family: $fredoka;
+            font-size: 2rem;
+            color: white;
+        }
+    }
+
+    &__leaderboard {
+      display: flex;
+      align-items:flex-end;
+      gap: 15px;
+    }
+
+    &__newplayer {
+        display: flex;
+        align-items:flex-end;
+        padding-right: 55px;
+        gap: 15px;
+    }
+
+}

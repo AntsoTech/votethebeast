@@ -1,5 +1,4 @@
 import React from 'react';
-import IPlayer from '../interfaces/IPlayer';
 
 interface Props {
   id: number;
@@ -8,23 +7,27 @@ interface Props {
   birthdate: Date;
   picture: string;
   winnerpicture: string;
-  points : number;
-  idPosition :number;
-  idCountry : number;
+  points: number;
+  idPosition: number;
+  idCountry: number;
+  position: string;
+  country: string;
 }
 
 const PlayerCard = (player: Props) => {
   return (
     <div className="playercard">
       <div className="playercard__image">
-        <img src="" alt="" />
+        <img src={player.picture} alt={player?.firstname} />
       </div>
       <div className="playercard__infos">
-        <h2> {player.firstname} {player.lastname}</h2>
-        <div className='playercard__infos__secondary'>
-            <h3>{player.birthdate}</h3>
-            <h3>{player.points}</h3>
-            <h3>{player.idCountry}</h3>
+        <h2>
+          {player.firstname} {player.lastname}
+        </h2>
+        <div className="playercard__infos__secondary">
+          <h3>{player.country}</h3>
+          {/* <h3>{player.points} points</h3> */}
+          <h3>{player.position}</h3>
         </div>
       </div>
     </div>
