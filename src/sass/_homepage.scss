@@ -1,0 +1,36 @@
+.homepage {
+  padding: 5vh 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vh;
+  background-color: antiquewhite;
+  height: 85vh;
+
+  h1 {
+    font-family: $fredoka;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  &__section {
+    display: flex;
+    gap: 10vw;
+    margin: auto;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap:10px;
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap:10px;
+    }
+  }
+  
+}
