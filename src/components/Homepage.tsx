@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import {NavigateFunction, useNavigate } from 'react-router-dom';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import IPlayer from '../interfaces/IPlayer';
 import PlayerCard from './PlayerCard';
@@ -10,6 +10,7 @@ const Homepage = () => {
   const [player1, setPlayer1] = useState<IPlayer>();
   const [player2, setPlayer2] = useState<IPlayer>();
   const [winnerInfos, setWinnerInfos] = useState<IPlayer>();
+  const [winnerBg, setWinnerBg] = useState<string>('');
   const [result, setResult] = useState<number>(0);
   const [cssPlayer1, setCssPlayer1] = useState<string>('');
   const [cssPlayer2, setCssPlayer2] = useState<string>('');
@@ -30,11 +31,13 @@ const Homepage = () => {
       setCssPlayer1('-win');
       setCssPlayer2('-lost');
       setWinnerInfos(player1);
+      setWinnerBg('-win');
     }
     if (result === player2?.id) {
       setCssPlayer2('-win');
       setCssPlayer1('-lost');
       setWinnerInfos(player2);
+      setWinnerBg('-win');
     }
   };
 
@@ -51,9 +54,8 @@ const Homepage = () => {
   };
 
   return (
-    <div className="homepage">
-      <h1 className="homepage__title">
-        {' '}
+    <div className={`homepage${winnerBg}`}>
+      <h1 className={`homepage__title${winnerBg}`}>
         {!winnerInfos
           ? `Who's the be(a)st player ever ?`
           : `You choose ${winnerInfos.firstname}`}
