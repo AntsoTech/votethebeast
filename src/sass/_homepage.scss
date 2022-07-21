@@ -1,12 +1,34 @@
 .homepage {
-  padding: 60px 0;
+  padding: 100px 0;
   display: flex;
   justify-content: center;
+  align-items:center;
   flex-direction: column;
-  gap: 5vh;
-  background-color: antiquewhite;
-  height: 85vh;
   position: relative;
+
+  &-win {
+    background-color: rgb(37, 37, 37);
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
+    height: 78vh;
+    position: relative;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: $fredoka;
+    font-size: 3rem;
+
+    &-win {
+      color: antiquewhite;
+      text-align: center;
+      font-family: $fredoka;
+      font-size: 3rem;
+    }
+  }
 
   h1 {
     font-family: $fredoka;
@@ -24,6 +46,7 @@
     font-family: $fredoka;
   }
   &__section {
+    padding-top: 5vh;
     display: flex;
     gap: 10vw;
     margin: auto;
