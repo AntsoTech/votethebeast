@@ -1,11 +1,12 @@
 .nav {
     display: flex;
-    position: fixed relative;
+    position: fixed ;
     width: 100vw;
     height: 40px;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(28, 28, 28);
+    z-index: 20;
 
     li {
         list-style: none;

@@ -12,22 +12,32 @@ interface Props {
   idCountry: number;
   position: string;
   country: string;
+  result: number;
+  setResultIntoCss: () => void;
 }
 
-const PlayerCard = (player: Props) => {
+const PlayerCard = ({
+  firstname,
+  lastname,
+  picture,
+  winnerpicture,
+  position,
+  country,
+  result,
+}: Props) => {
   return (
     <div className="playercard">
       <div className="playercard__image">
-        <img src={player.picture} alt={player?.firstname} />
+        <img src={result ? winnerpicture : picture} alt={firstname} />
       </div>
       <div className="playercard__infos">
         <h2>
-          {player.firstname} {player.lastname}
+          {firstname} {lastname}
         </h2>
         <div className="playercard__infos__secondary">
-          <h3>{player.country}</h3>
+          <h3>{country}</h3>
           {/* <h3>{player.points} points</h3> */}
-          <h3>{player.position}</h3>
+          <h3>{position}</h3>
         </div>
       </div>
     </div>
