@@ -7,7 +7,7 @@ const Nav = () => {
       <img src="../icons/ball.png" alt="" width="50px" className="nav__ball" />
       <Link to="/">
         <li className="nav__logo">
-          <h1 className='nav__logo__title'>BEASTIES </h1>
+          <h1 className="nav__logo__title">BEASTIES </h1>
         </li>
       </Link>
       <Link to="/ranking">
