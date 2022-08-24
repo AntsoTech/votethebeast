@@ -17,7 +17,7 @@ const Ranking = () => {
 
   // Get the list of all players and handling filters
   const getPlayersList = async () => {
-    let url = `http://localhost:3000/api/players?order=points`;
+    let url = `${import.meta.env.VITE_DB_URL}api/players?order=points`;
     if (position) {
       url += `&position=${position}`;
     }
@@ -30,7 +30,7 @@ const Ranking = () => {
 
   // Get all the countries of the player (filter option)
   const getCountriesList = async () => {
-    let url = `http://localhost:3000/api/countries`;
+    let url = `${import.meta.env.VITE_DB_URL}api/countries`;
     const { data } = await axios.get(url);
     setCountriesList(data);
   };
