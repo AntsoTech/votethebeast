@@ -19,8 +19,7 @@ const Homepage = () => {
   useEffect(() => {
     const getPlayersList = async () => {
       const url = `${import.meta.env.VITE_API_URL}api/players?random=true`;
-      console.log(url);
-      const { data } = await axios.get(url);
+      const { data } = await axios.get(url,{ withCredentials: true });
       setPlayer1(data[0]);
       setPlayer2(data[1]);
     };
