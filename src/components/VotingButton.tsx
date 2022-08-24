@@ -17,7 +17,7 @@ const VotingButton = ({ setResult, id, firstname, points }: Props) => {
       {
         points: newPoints,
       },
-      { withCredentials: true },
+      { withCredentials: true }
     );
     console.log(data);
   };
