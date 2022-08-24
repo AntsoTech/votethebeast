@@ -24,7 +24,7 @@ const Ranking = () => {
     if (country) {
       url += `&country=${country}`;
     }
-    const { data } = await axios.get(url);
+    const { data } = await axios.get(url,{ withCredentials: true });
     setPlayerList(data);
   };
 
