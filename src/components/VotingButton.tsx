@@ -11,7 +11,7 @@ interface Props {
 const VotingButton = ({ setResult, id, firstname, points }: Props) => {
   // Add +1 point to the voted player (the winner)
   const addPointTheWinner = async (newPoints: number) => {
-    const url = `${import.meta.env.VITE_DB_URL}api/players/${id}`;
+    const url = `${import.meta.env.VITE_API_URL}api/players/${id}`;
     const { data } = await axios.put(url, {
       points: newPoints,
     });
